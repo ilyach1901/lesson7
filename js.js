@@ -23,7 +23,7 @@ let array = []; // Пустой объект
             array.push(person);
         }
  
-        let s = "";
+        let s = (" ");
         for (let i = 1; i <= n; i++) {
             let person = array[i - 1];
             s += `Пользователь ${i}
