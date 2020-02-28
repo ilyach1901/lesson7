@@ -15,21 +15,21 @@
 // После вывести весь обьект в консоль
 
 
-let array = []; 
-let n = 10;
-for (let i = 1; i <= n; i++) {
-    let pair = prompt(`Введите имя и возраст человека с id:${i}\nНапример:\nИван 36`).split("");
-    let person = { name: pair[0], age: +pair[1] };
-    array.push(person);
-}
-
-let s = "";
-for (let i = 1; i <= n; i++) {
-    let person = array[i - 1];
-    s += `Пользователь ${i}
+let array = []; // Пустой объект
+        let n = 10;
+        for (let i = 1; i <= n; i++) {
+            let pair = prompt(`Введите имя и возраст человека с id:${i}\nНапример:\nИван 36`).split(" ");
+            let person = { name: pair[0], age: +pair[1] };
+            array.push(person);
+        }
+ 
+        let s = "";
+        for (let i = 1; i <= n; i++) {
+            let person = array[i - 1];
+            s += `Пользователь ${i}
 Имя ${person.name}
 Возраст ${person.age}
  
 `;
-}
-console.log(s + JSON.stringify(array));
+        }
+        console.log(s + JSON.stringify(array));
